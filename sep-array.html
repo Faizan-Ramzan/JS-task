@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>List all array items, with keys and values:</p>
+
+<p id="demo"></p>
+
+<script>
+var arr_main = [{alphs: 332}, "sheraz", 33, 54, "ahmed", true, undefined];
+var output = document.getElementById("demo");
+var arr_object = [];
+var arr_string = [];
+var arr_number = [];
+var arr_boolean = [];
+var arr_undefined = [];
+
+arr_main.forEach(myFunction);
+
+function myFunction(item, index ) {
+  console.log(typeof item);
+  
+  switch(typeof item) {
+    case "object":
+       arr_object.push(item);
+      break;
+    case "number":
+       arr_number.push(item);
+      break;
+    case "boolean":
+       arr_boolean.push(item);
+      break;
+    case "string":
+       arr_string.push(item);
+      break;
+    default:
+       arr_undefined.push(item);
+  }
+}
+  console.log(arr_object);
+  console.log(arr_string);
+  console.log(arr_number);
+  console.log(arr_boolean);
+  console.log(arr_undefined);
+
+
+</script>
+
+</body>
+</html>
